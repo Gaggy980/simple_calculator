@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*,*::before, *::after {
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(207, 119, 207),rgb(59, 59, 167));
+    user-select: none;
+}
+
+
+
+.calc-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 105px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calc-grid > button{
+    font-family: 'Exo 2', sans-serif;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid rgb(14, 13, 13);
+    background-color: rgb(46, 41, 41);
+    color: white;
+    outline: none;
+    border-radius: 1px;
+}
+
+.calc-grid > button:hover{
+    background-color: rgb(46, 41, 41, .8);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.output .prev-operand{
+    color: rgb(126, 197, 144, .75);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.output .curr-operand{
+    color: rgba(106, 185, 126);
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+    
+
+    
